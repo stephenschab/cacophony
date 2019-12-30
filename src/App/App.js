@@ -1,6 +1,7 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import NewUserForm from '../NewUserForm/NewUserForm';
+import LandingPage from '../LandingPage/LandingPage';
 
 function App() {
   return (
@@ -10,8 +11,12 @@ function App() {
         <p className="app-logo">Cacophony</p>
       </nav>
 
-      <NewUserForm />
-      
+      <Route
+        exact
+        path='/'
+        component={LandingPage}
+      />
+
     </div>
   );
 }
