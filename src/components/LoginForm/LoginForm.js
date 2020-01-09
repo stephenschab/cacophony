@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
+import LoginContext from '../../contexts/LoginContext';
 
 class LoginForm extends Component {
   static defaultProps = {
-    onLoginSucces: () => {}
+    onLoginSuccess: () => {}
   }
+
+  static contextType = LoginContext;
 
   state = { error: null }
 
@@ -20,10 +23,11 @@ class LoginForm extends Component {
       password: password.value
     })
       .then(res => {
-        // user_name.value = ''
-        // password.value = ''
-        TokenService.saveAuthToken(res.authToken)
-        this.props.onLoginSucces()
+        user_name.value = '';
+        password.value = '';
+        TokenService.saveAuthToken(res.authToken);
+        this.props.onLoginSuccess();
+        this.context.setLoggedIn();
       })
       .catch(res => {
         this.setState({ error: res.error })

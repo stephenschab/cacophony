@@ -1,0 +1,9 @@
+.PostForm select, .PostForm label {
+  font-size: 1.1em;
+}
+
+.PostForm label {
+  display: inline-block;
+  margin: 10px 10px 20px;
+  margin-left: 0;
+}

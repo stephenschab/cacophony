@@ -5,8 +5,12 @@ import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 import LandingPage from '../../routes/LandingPage/LandingPage';
 import RegisterPage from '../../routes/RegisterPage/RegisterPage';
 import LoginPage from '../../routes/LoginPage/LoginPage';
+import PostsListPage from '../../routes/PostListPage/PostListPage';
+import PostPage from '../../routes/PostPage/PostPage';
+import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import Navbar from '../Navbar/Navbar';
 import PrivateRoute from '../Utils/PrivateRoute';
+import './App.css';
 
 export default class App extends Component {
   state = {
@@ -21,39 +25,41 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header classname='App__header'>
+        <header className='App__header'>
           <Navbar />
         </header>
 
         <main className='App__main'>
           {this.state.hasError && <p className='error'></p>}
-        </main>
   
-        <Switch>
-          <Route
-            exact
-            path='/'
-            component={LandingPage}
-          />
-          <PublicOnlyRoute
-            path='/new-user'
-            component={RegisterPage}
-          />
-          <PublicOnlyRoute
-            path='/login'
-            component={LoginPage}
-          />
-          <PrivateRoute
-            path='/posts'
-            component={PostsListPage}
-          />
-          <PrivateRoute
-            path='/post/:post'
-            component={PostPage}
-          <Route
-            component={NotFoundPage}
-          />
-        </Switch>
+          <Switch>
+            <PublicOnlyRoute
+              exact
+              path='/'
+              component={LandingPage}
+            />
+            <PublicOnlyRoute
+              path='/new-user'
+              component={RegisterPage}
+            />
+            <PublicOnlyRoute
+              path='/login'
+              component={LoginPage}
+            />
+            <PrivateRoute
+              exact
+              path='/posts'
+              component={PostsListPage}
+            />
+            <PrivateRoute
+              path='/posts/:postId'
+              component={PostPage}
+            />
+            <Route
+              component={NotFoundPage}
+            />
+          </Switch>
+        </main>
       </div>
     );
   }
