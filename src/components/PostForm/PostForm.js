@@ -24,55 +24,59 @@ export default class PostForm extends Component {
 
   render() {
     return (
-      <form
-        className='PostForm'
-        onSubmit={this.handleSubmit}
-      >
-        <div className='title'>
-          <label htmlFor='title'>Project Title:</label>
-          <input
-            required
-            aria-label='Type project title...'
-            type='text'
-            name='text'
-            id='title'
-          />
-        </div>
+      <div className='PostForm'>
+        <form
+          className='PostForm__form'
+          onSubmit={this.handleSubmit}
+        >
+          <div className='PostForm__inputs'>
+            <div className='title'>
+              <label htmlFor='title'>Project Title:</label>
+              <input
+                required
+                aria-label='Type project title...'
+                type='text'
+                name='text'
+                id='title'
+              />
+            </div>
 
-        <div className='content'>
-          <label htmlFor='content'>Project Info:</label>
-          <textarea
-            required
-            aria-label='Type project information...'
-            name='content'
-            id='content'
-            cols='30'
-            rows='3'
-          />
-        </div>
+            <div className='content'>
+              <label htmlFor='content'>Project Info:</label>
+              <textarea
+                required
+                aria-label='Type project information...'
+                name='content'
+                id='content'
+                cols='25'
+                rows='3'
+              />
+            </div>
 
-        <div className='select'>
-          <label htmlFor='genre'>Project Genre:</label>
-          <select
-            required
-            aria-label='Select project genre...'
-            name='genre'
-            id='genre'
-          >
-            <option value='rock'>Rock</option>
-            <option value='electronic'>Electronic</option>
-            <option value='classical'>Classical</option>
-            <option value='hip-hop'>Hip Hop</option>
-            <option value='jazz'>Jazz</option>
-            <option value='blues'>Blues</option>
-            <option value='folk/country'>Folk/Country</option>
-          </select>
-        </div>
+            <div className='select'>
+              <label htmlFor='genre'>Project Genre:</label>
+              <select
+                required
+                aria-label='Select project genre...'
+                name='genre'
+                id='genre'
+              >
+                <option value='Rock'>Rock</option>
+                <option value='Electronic'>Electronic</option>
+                <option value='Classical'>Classical</option>
+                <option value='Hip Hop'>Hip Hop</option>
+                <option value='Jazz'>Jazz</option>
+                <option value='Blues'>Blues</option>
+                <option value='Folk/Country'>Folk/Country</option>
+              </select>
+            </div>
+          </div>
 
-        <button type='submit'>
-          Post project
-        </button>
-      </form>
+          <button type='submit' className='PostForm__button'>
+            Post project
+          </button>
+        </form>
+      </div>
     )
   }
 }

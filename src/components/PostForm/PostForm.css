@@ -2,15 +2,27 @@
   border: 3px solid rgba(18, 126, 3, 0.25);
   border-radius: 10px;
   padding: 15px;
-  margin-bottom: 30px;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 3;
+  text-align: center;
 }
 
-.PostForm select, .PostForm label {
-  font-size: 1.1em;
+.PostForm__inputs {
+  margin: 0 auto;
 }
 
-.PostForm label {
+.PostForm__inputs textarea {
+  vertical-align: top;
+}
+
+.PostForm__inputs label {
   display: inline-block;
-  margin: 10px 10px 20px;
-  margin-left: 0;
+  min-width: 30%;
+  text-align: start;
+}
+
+.PostForm__button {
+  text-align: center;
+  margin-top: 15px;
 }
