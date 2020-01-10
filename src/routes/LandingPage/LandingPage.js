@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class LandingPage extends React.Component {
+import './LandingPage.css';
+
+class LandingPage extends Component {
   render() {
     return (
-      <div>
+      <div className="LandingPage">
 
-        <h1>Hero</h1>
+        <h1>Welcome to Cacophony</h1>
 
-        <p>Volutpat blandit aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis</p>
+        <div className="LandingPage__content">
+          <p>Cacophony is a community for Pro Tools users. This site is designed to be a forum for users to get together, share sessions with each other, and request help on sessions if they need it.</p>
 
-        <p>New to Cacophony? <Link to='/new-user'>sign up</Link></p>
-        <p>Return users <Link to='/login'>login</Link></p>
+          <p>New to Cacophony? <Link to='/new-user'>sign up</Link></p>
+          <p>Return users <Link to='/login'>login</Link></p>
+        </div>
       </div>
     )
   }

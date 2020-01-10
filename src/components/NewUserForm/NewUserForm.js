@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import UserApiService from '../../services/user-api-service';
+import './NewUserForm.css';
 
 class NewUserForm extends Component {
   static defaultProps = {
@@ -34,29 +35,34 @@ class NewUserForm extends Component {
     const { error } = this.state
 
     return (
-      <div>
-
+      <div className='NewUserForm'>
         <form
-          className='NewUserForm'
+          className='NewUserForm__form'
           onSubmit={this.handleSubmit}
         >
 
           <div role='alert'>
             {error && <p>{error}</p> }
           </div>
-          <div>
-            <label htmlFor="user_name">Username</label>
-            <input placeholder='user_name' type="text" name='user_name' id='user_name' required />
+
+          <div className='NewUserForm__inputs'>
+            <div>
+              <label htmlFor="user_name">Username</label>
+              <input placeholder='user_name' type="text" name='user_name' id='user_name' required />
+            </div>
+
+            <div>
+              <label htmlFor="email">Email</label>
+              <input type="text" name='email' id='email' required />
+            </div>
+
+            <div>
+              <label htmlFor="password">Password</label>
+              <input type="password" name='password' id='password' required/>
+            </div>
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="text" name='email' id='email' required />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="password" name='password' id='password' required/>
-          </div>
-          <button type='submit'>Sign Up</button>
+          
+          <button type='submit' className='NewUserForm__button'>Sign Up</button>
         </form>
 
       </div>

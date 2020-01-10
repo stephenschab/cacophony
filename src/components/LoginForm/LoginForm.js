@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 import LoginContext from '../../contexts/LoginContext';
+import './LoginForm.css';
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -37,23 +38,29 @@ class LoginForm extends Component {
     const { error } = this.state
 
     return (
-      <div>
+      <div className='LoginForm'>
         <form
-          className='login-form'
+          className='LoginForm__form'
           onSubmit={this.handleSubmitJwtAuth}
         >
-          <div role='alert'>
-            {error && <p>{error}</p>}
+
+          <div className='LoginForm__inputs'>
+            <div role='alert'>
+              {error && <p>{error}</p>}
+            </div>
+
+            <div>
+              <label htmlFor="user_name">Username</label>
+              <input placeholder='user_name' type="text" name='user_name' id='user_name' required />
+            </div>
+          
+            <div>
+              <label htmlFor="password">Password</label>
+              <input type="password" name='password' id='password' required />
+            </div>
+          
+            <button type='submit' className='LoginForm__button'>Login</button>
           </div>
-          <div>
-            <label htmlFor="user_name">Username</label>
-            <input placeholder='user_name' type="text" name='user_name' id='user_name' required />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="password" name='password' id='password' required />
-          </div>
-          <button type='submit'>Login</button>
         </form>
       </div>
     )

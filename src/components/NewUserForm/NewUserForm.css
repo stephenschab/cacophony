@@ -1,0 +1,22 @@
+.NewUserForm {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 2;
+  text-align: center;
+}
+
+.NewUserForm__inputs {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.NewUserForm__inputs label {
+  display: inline-block;
+  min-width: 25%;
+  text-align: start;
+}
+
+.NewUserForm__button {
+  text-align: center;
+  margin-top: 15px;
+}
