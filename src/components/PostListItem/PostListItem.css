@@ -2,12 +2,11 @@
   background: none;
   display: flex;
   flex-direction: column;
-  border: 0;
+  border: 3px solid rgba(18, 126, 3, 0.25);
   font-size: smaller;
   text-decoration: none;
   box-shadow: 0px 11px 21px -8px rgba(4, 68, 7, 0.5);
-  margin-bottom: 40px;
-  margin-right: 20px;
+  margin: 20px auto;
   border-radius: 10px;
 }
 

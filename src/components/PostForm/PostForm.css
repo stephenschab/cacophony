@@ -1,3 +1,10 @@
+.PostForm {
+  border: 3px solid rgba(18, 126, 3, 0.25);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
 .PostForm select, .PostForm label {
   font-size: 1.1em;
 }

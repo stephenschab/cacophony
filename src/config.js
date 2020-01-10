@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api',
+  API_ENDPOINT: 'https://shielded-ridge-85753.herokuapp.com/',
   TOKEN_KEY: 'cacophony-client-auth-token'
 }
