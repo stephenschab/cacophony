@@ -34,8 +34,6 @@ export class LoginProvider extends Component {
       clearLoggedIn: this.clearLoggedIn
     }
 
-    console.log('Look here', this.state.loggedIn)
-
     return (
       <LoginContext.Provider value={value}>
         {this.props.children}

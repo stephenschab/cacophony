@@ -73,7 +73,7 @@ function PostComments({ comments = [] }) {
       {comments.map(comment =>
         <li key={comment.id} className='PostPage__comment'>
           <p className='PostPage__comment-user'>
-            {comment.user.user_name}
+            {comment.user_name}
           </p>
           <p className='PostPage__comment-text'>
             {comment.text}
