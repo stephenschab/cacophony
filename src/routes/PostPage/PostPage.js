@@ -31,10 +31,14 @@ export default class PostPage extends Component {
     const { post, comments } = this.context;
     return (
       <>
-        <h2>{post.title}</h2>
-        <PostContent post={post} />
-        <PostComments comments={comments} />
+        <div className="Post">
+          <h2 className="Post__title">{post.title}</h2>
+          <p className="Post__user-name">Original Poster: {post.user_name}</p>
+          <p className="Post__content">{post.content}</p>
+        </div>
+
         <CommentForm postId={this.props.match.params.postId}/>
+        <PostComments comments={comments} />
       </>
     )
   }
@@ -57,14 +61,6 @@ export default class PostPage extends Component {
       </div>
     )
   }
-}
-
-function PostContent({ post }) {
-  return (
-    <p className='PostPage__content'>
-      {post.content}
-    </p>
-  )
 }
 
 function PostComments({ comments = [] }) {

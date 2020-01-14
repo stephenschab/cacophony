@@ -12,8 +12,10 @@ export default class PostListItem extends Component {
         <div className='PostListItem__details'>
           <div className='PostListItem__text'>
             <h2 className='PostListItem__title'>{post.title}</h2>
-            <p className='PostListItem__genre'>{post.genre}</p>
-            <p className='PostListItem__user'>{post.user_name}</p>
+            <div className="PostListItem__data">
+              <p className='PostListItem__user'>{post.user_name}</p>
+              <p className='PostListItem__genre'>{post.genre}</p>
+            </div>
             <p className='PostListItem__description'>{post.content}</p>
           </div>
         </div>

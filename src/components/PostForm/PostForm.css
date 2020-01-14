@@ -1,19 +1,14 @@
 .PostForm {
-  border: 3px solid rgba(18, 126, 3, 0.25);
-  border-radius: 10px;
-  padding: 15px;
-  width: 60%;
+  width: 300px;
   margin: 0 auto;
   line-height: 3;
   text-align: center;
+  display: block;
 }
 
 .PostForm__inputs {
+  text-align: center;
   margin: 0 auto;
-}
-
-.PostForm__inputs textarea {
-  vertical-align: top;
 }
 
 .PostForm__inputs label {
@@ -22,7 +17,17 @@
   text-align: start;
 }
 
+.PostForm__inputs textarea {
+  vertical-align: top;
+}
+
 .PostForm__button {
   text-align: center;
   margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .PostForm {
+    width: 30%;
+  }
 }

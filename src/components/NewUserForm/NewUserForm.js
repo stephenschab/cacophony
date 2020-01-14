@@ -57,9 +57,11 @@ class NewUserForm extends Component {
             </div>
 
             <div>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password*</label>
               <input type="password" name='password' id='password' required/>
             </div>
+
+            <p classname="NewUserForm__requirements">* Password must include at least 1 upper case, lower case, number, and special character</p>
           </div>
           
           <button type='submit' className='NewUserForm__button'>Sign Up</button>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import PostApiService from '../services/post-api-service' 
+
 const PostListContext = React.createContext({
   postList: [],
   error: null,
@@ -19,11 +21,10 @@ export class PostListProvider extends Component {
     this.setState({ postList });
   };
 
-  addPost = post => {
-    this.setPostList([
-      ...this.state.postList,
-      post
-    ])
+  addPost = () => {
+    PostApiService.getPosts()
+      .then(this.setPostList)
+      .catch(this.context.setError)
   }
 
   setError = error => {

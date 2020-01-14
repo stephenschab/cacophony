@@ -49,7 +49,7 @@ export default class PostForm extends Component {
               rows='3'
             />
 
-            <label htmlFor='genre'>Project Genre:</label>
+            <label htmlFor='genre'>Project Genre: </label>
             <select
               required
               aria-label='Select project genre...'

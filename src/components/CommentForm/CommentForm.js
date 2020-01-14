@@ -23,24 +23,22 @@ export default class CommentForm extends Component {
   render() {
     return (
       <form
-        className='CommentForm__form'
+        className='CommentForm'
         onSubmit={this.handleSubmit}
       >
-        <div className='text'>
-          <textarea
-            required
-            aria-label='Type a comment...'
-            name='text'
-            id='text'
-            cols='30'
-            rows='3'
-            placeholder='Type a comment...'>
-          </textarea>
+        <textarea
+          required
+          aria-label='Type a comment...'
+          name='text'
+          id='text'
+          cols='30'
+          rows='3'
+          placeholder='Type a comment...'>
+        </textarea>
 
-          <button type='submit'>
-            Post Comment
-          </button>
-        </div>
+        <button type='submit'>
+          Post Comment
+        </button>
       </form>
     )
   }
