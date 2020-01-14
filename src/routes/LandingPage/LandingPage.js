@@ -8,13 +8,17 @@ class LandingPage extends Component {
     return (
       <div className="LandingPage">
 
-        <h1>Welcome to Cacophony</h1>
+        <h1 className="LandingPage__title">Welcome to Cacophony</h1>
 
         <div className="LandingPage__content">
-          <p>Cacophony is a community for Pro Tools users. This site is designed to be a forum for users to get together, share sessions with each other, and request help on sessions if they need it.</p>
-
+          <p>Cacophony is a community for Pro Tools users. This site is designed to be a forum for users to get together, share sessions with each other, and request help on sessions if they need it. You can either create your own profile or us the given test user account to explore the site.</p>
           <p>New to Cacophony? <Link to='/new-user'>sign up</Link></p>
           <p>Return users <Link to='/login'>login</Link></p>
+        </div>
+
+        <div className="LandingPage__test">
+          <p>Test User Name: <span className="LandingPage__test-info">TestUser</span></p>
+          <p>Test Password: <span className="LandingPage__test-info">Passw0rd!</span></p>
         </div>
       </div>
     )

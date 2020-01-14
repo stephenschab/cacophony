@@ -1,5 +1,6 @@
 .LandingPage {
   text-align: center;
+  padding: 5px;
 }
 
 .LandingPage__content {
@@ -8,4 +9,18 @@
   text-align: start;
   line-height: 1.5;
   text-indent: 5%;
+}
+
+.LandingPage__test  {
+  margin-top: 40px;
+}
+
+.LandingPage__test-info {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .LandingPage__content {
+    width: 50%;
+  }
 }
