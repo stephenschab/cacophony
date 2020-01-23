@@ -2,7 +2,6 @@
 
 Live Site: https://cacophony.now.sh
 
-##API
+![Description of image](images/some_image.png)
 
-API URL: https://shielded-ridge-85753.herokuapp.com/api
 
