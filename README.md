@@ -1,7 +1,7 @@
 ##Cacophony
 
-Live Site: https://cacophony.now.sh
+[Live Site](https://cacophony.now.sh)
 
-![Description of image](images/some_image.png)
+![Screenshot of Cacophony landing page](./images/cacophony-screenshot.PNG)
 
 
