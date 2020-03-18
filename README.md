@@ -6,7 +6,7 @@
 
 Cacophony is a posting board for Pro Tools users who are looking to meet other users. A user has the ability to create an account with us and then login to their new account. Once logged in users are able to make posts referring to a particular project the are working on. Users are then able to comment on any of the posts that either they or other users have made.
 
-**Live Site:** [https://cacophony.now.sh](https://cacophony.now.sh)
+**Live Site:** [https://cacophony.now.sh](https://cacophony.now.sh) <br />
 **API Repo:** [https://github.com/stephenschab/cacophony-server](https://github.com/stephenschab/cacophony-server)
 
 **Demo Credentials**
